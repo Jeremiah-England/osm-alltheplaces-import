@@ -1,6 +1,9 @@
 # osm-alltheplaces-import
 A collection of scripts for assisting the import of [alltheplaces] data into openstreetmap
 
+The scripts are currently for preparing a local import into the SC Update area. But they 
+could easily be adapted to another area in the United States and maybe other places as well.
+
 ## Getting Started
 
 You can run the download script to get the data. 
