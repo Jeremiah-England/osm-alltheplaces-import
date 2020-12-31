@@ -6,7 +6,7 @@ https://gist.githubusercontent.com/Jeremiah-England/c06ef4461d9caca4c51734bd46a1
 And the associated MapRoulette Challenge is here:
 https://maproulette.org/admin/project/42267/challenge/15591
 Or... probably here if you're not the admin:
-https://maproulette.org/challenge/15591/
+https://maproulette.org/browse/challenges/15591
 """
 import json
 import math
