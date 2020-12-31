@@ -45,8 +45,10 @@ if __name__ == '__main__':
         for tag in drop_tags:
             del f['properties'][tag]
 
-    for f in collection_boxes:
-        del f['id']
+    # actually I want to keep these in. See here:
+    # https://www.reddit.com/r/openstreetmap/comments/knz0x5/help_im_creating_a_test_map_roulette_project_with/
+    # for f in collection_boxes:
+    #     del f['id']
 
     # filter out overlapping po boxes taking the latter ones for now
     filtered_boxes = []
@@ -60,9 +62,10 @@ if __name__ == '__main__':
     collection_boxes = filtered_boxes
 
     # convert to feature collection
-    collection_boxes = [{'type': 'FeatureCollection', 'features': [f]} for f in collection_boxes]
+    # collection_boxes = [{'type': 'FeatureCollection', 'features': [f]} for f in collection_boxes]
 
     print(len(collection_boxes))
-    with open('data/spartanburg-post-boxes.geojson', 'w') as f:
+    with open('data/spartanburg-post-boxes-2.geojson', 'w') as f:
         # See https://learn.maproulette.org/documentation/line-by-line-geojson/ for explanation of encoding
-        f.write(''.join(JSONSeqEncoder().encode(collection_boxes)))
+        # f.write(''.join(JSONSeqEncoder().encode(collection_boxes)))
+        json.dump({'type': 'FeatureCollection', 'features': collection_boxes}, f)
